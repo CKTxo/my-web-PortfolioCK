@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+header {
+  background: #E9967A;
+  color: #fff;
+  padding: 3rem 0;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+section {
+  padding: 3rem 0;
+  background: #fff;
+  margin: 1rem 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #F26665;
+}
+
+h3{
+  text-align: center;
+  margin: 2rem;
+  color: #F26665		;
+}
+.p{
+  text-align: center;
+  margin: 2rem;
+  color: #DE3163;
+}
+.top-left-image {
+  position: absolute;
+  top: 50px;
+  left: 75px;
+}
+
+.top-left-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in {
+  font-size: 48px;
+  color: #ffffff;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+.animated-img {
+  animation: float 2s ease-in-out infinite;
+}
+.typing-loop {
+  font-size: 28px;
+  border-right: 30px solid #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0ch;
+  animation: typingLoop 5s steps(30) infinite, blink 0.7s step-end infinite;
+}
+
+@keyframes typingLoop {
+  10%   { width: 0ch; }
+  40%  { width: 30ch; }  /* พิมพ์จนสุด */
+  60%  { width: 30ch; }  /* ค้างไว้สักพัก */
+  100% { width: 0ch; }   /* ลบข้อความออก */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+.column-box {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.blinking-text {
+  font-size: 48px;
+  font-weight: bold;
+  color: #080808;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.glow-text {
+  font-size: 60px;
+  color: #080808;
+  text-align: center;
+  text-shadow:
+    0 0 5px rgb(158, 161, 161),
+    0 0 10px rgb(158, 161, 161),
+    0 0 20px rgb(158, 161, 161),
+    0 0 40px rgb(158, 161, 161),
+    0 0 80px rgb(158, 161, 161);
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow:
+      0 0 5px rgb(158, 161, 161),
+      0 0 10px rgb(158, 161, 161),
+      0 0 20px rgb(158, 161, 161),
+      0 0 40px rgb(158, 161, 161),
+      0 0 80px rgb(158, 161, 161),
+  }
+  100% {
+    text-shadow:
+      0 0 10px rgb(158, 161, 161),
+      0 0 20px rgb(158, 161, 161),
+      0 0 30px rgb(158, 161, 161),
+      0 0 60px rgb(158, 161, 161),
+      0 0 100px rgb(158, 161, 161),
+  }
+}
+.noto-sans-thai {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project {
+  background: #eaeaea;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
